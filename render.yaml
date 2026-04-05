@@ -24,17 +24,6 @@ services:
       - key: DJANGO_ALLOWED_HOSTS
         value: ".onrender.com"
       - key: DJANGO_CORS_ALLOWED_ORIGINS
-        value: "https://wacu-frontend.onrender.com"
+        value: "https://your-app.vercel.app"
       - key: DJANGO_CSRF_TRUSTED_ORIGINS
-        value: "https://wacu-frontend.onrender.com"
-
-  - type: web
-    name: wacu-frontend
-    runtime: node
-    rootDir: frontend
-    buildCommand: npm ci && npm run build
-    startCommand: npm start
-    plan: free
-    envVars:
-      - key: NEXT_PUBLIC_API_URL
-        value: "https://wacu-backend.onrender.com"
+        value: "https://your-app.vercel.app"
